@@ -1,0 +1,175 @@
+:root {
+  --brand-color: #5bb4c3;
+  --secondary-color: #f285b4;
+  --accent-color: #8bb36e;
+
+  --heading-font: Helvetica, Arial, sans-serif;
+  --text-font: Georgia, Garamond, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--text-font);
+}
+
+header,
+main,
+footer {
+  padding-inline: calc((100vw - 800px) / 2);
+}
+
+header {
+  background-color: var(--brand-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  font-variant: small-caps;
+}
+
+header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > nav a {
+  display: block;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
+  box-shadow: -0.1em 0.1em 0.25em rgba(0, 0, 0, 0.5);
+}
+
+header > nav a:hover {
+  background-color: var(--accent-color);
+}
+
+main {
+  padding-block: 1rem;
+}
+
+main > *:first-child {
+  margin-top: 0;
+}
+
+main h2 {
+  color: var(--secondary-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+main p {
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+main blockquote {
+  position: relative;
+  margin-inline: 5%;
+  font-size: 2em;
+  color: var(--brand-color);
+  text-indent: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+main blockquote:before {
+  /* position: absolute;
+  top: -0.5em; */
+  /* left: 0; */
+  content: '“';
+  font-size: 150%;
+  color: var(--secondary-color);
+}
+
+main blockquote:after {
+  /* position: absolute;
+  right: 0; */
+  content: '”';
+  font-size: 150%;
+  color: var(--secondary-color);
+}
+
+main.about h2 {
+  text-align: left;
+}
+
+main.about img {
+  float: right;
+  width: 30%;
+  padding-left: 1em;
+}
+
+footer {
+  margin-top: auto;
+  padding-block: 1rem;
+  font-size: 90%;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: right;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-variant: small-caps;
+}
+
+form textarea {
+  resize: none;
+  height: 10em;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+/* input:focus,
+textarea:focus {
+  border: 3px solid var(--accent-color);
+} */
+
+:focus {
+  outline: 2px solid var(--brand-color);
+  border-radius: 3px;
+}
